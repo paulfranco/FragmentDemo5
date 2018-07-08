@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MyListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -33,5 +33,12 @@ public class MainActivity extends AppCompatActivity {
         transaction.add(R.id.containerFragmentA, fragmentA, "fragA");
         transaction.commit();
 
+    }
+
+    @Override
+    public void addTwoNumbers(int num1, int num2) {
+        int result = num1 + num2;
+
+        txvResult.setText("Result: " + result);
     }
 }

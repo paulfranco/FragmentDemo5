@@ -44,6 +44,9 @@ public class FragmentA extends Fragment {
 
         int firstNum = Integer.valueOf(etFirstNumber.getText().toString());
         int secondNum = Integer.valueOf(etSecondNumber.getText().toString());
+
+        MyListener myListener = (MyListener) getActivity();
+        myListener.addTwoNumbers(firstNum, secondNum);
     }
 
 
